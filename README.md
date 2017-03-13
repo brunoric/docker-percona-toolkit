@@ -1,7 +1,7 @@
 docker-percona-toolkit status
 -----------------------------
 
-![circleci-master-build](https://circleci.com/gh/brunoric/percona-toolkit/tree/master.png?style=shield)
+![circleci-master-build](https://circleci.com/gh/brunoric/docker-percona-toolkit/tree/master.png?style=shield)
 
 docker-percona-toolkit
 ----------------------
