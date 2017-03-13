@@ -9,38 +9,71 @@ docker-percona-toolkit
 Alpine Docker image to run [Percona Toolkit commands][percona-toolkit].
 
 pt-align
+
 pt-archiver
+
 pt-config-diff
+
 pt-deadlock-logger
+
 pt-diskstats
+
 pt-duplicate-key-checker
+
 pt-fifo-split
+
 pt-find
+
 pt-fingerprint
+
 pt-fk-error-logger
+
 pt-heartbeat
+
 pt-index-usage
+
 pt-ioprofile
+
 pt-kill
+
 pt-mext
+
 pt-mongodb-query-digest
+
 pt-mongodb-summary
+
 pt-mysql-summary
+
 pt-online-schema-change
+
 pt-pmp
+
 pt-query-digest
+
 pt-show-grants
+
 pt-sift
+
 pt-slave-delay
+
 pt-slave-find
+
 pt-slave-restart
+
 pt-stalk
+
 pt-summary
+
 pt-table-checksum
+
 pt-table-sync
+
 pt-table-usage
+
 pt-upgrade
+
 pt-variable-advisor
+
 pt-visual-explain
 
 How to get?
@@ -58,7 +91,7 @@ This command will pull the `:latest` image (if you do not have it already) and e
 
 You can also pull the desired image tag from the Docker Hub with:
 
-    docker run --rm -it brunoric/percona-toolkit:3.0.1
+    docker pull brunoric/percona-toolkit:3.0.1
 
 This command will pull the image (if you do not have it already) without creating any container like the first method does.
 
@@ -68,12 +101,12 @@ Finally you can build the needed image from scratch. You will need to clone `bru
 
     docker build -t brunoric/percona-toolkit:3.0.1 .
 
-With this method you can also make changes on the Dockerfiles fitting the images to your runtime.
+With this method you can also make changes on the Dockerfile fitting the image to your runtime.
 
 How to use?
 -----------
 
-Just pass any command by parameter to `docker run --rm -it`. 
+Just pass any command as parameter to `docker run --rm -it`:
 
     docker run --rm -it pt-index-usage -h your.database.host -uyour_user -pyour_pass --database=your_database
 
