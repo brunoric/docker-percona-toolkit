@@ -9,6 +9,7 @@ dependencies:
   override:
     - docker info
     - docker build -t brunoric/percona-toolkit:3.0.1 .
+    - docker build -t brunoric/percona-toolkit:3 .
     - docker build -t brunoric/percona-toolkit:latest .
     
 test:
@@ -21,4 +22,5 @@ deployment:
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       - docker push brunoric/percona-toolkit:3.0.1
+      - docker push brunoric/percona-toolkit:3
       - docker push brunoric/percona-toolkit:latest
