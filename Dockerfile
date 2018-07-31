@@ -1,7 +1,7 @@
 FROM alpine:3.5
 MAINTAINER Bruno Ricardo Siqueira <brunoric@gmail.com>
 
-ENV PERCONA_TOOLKIT_VERSION 3.0.1
+ENV PERCONA_TOOLKIT_VERSION 3.0.11
 
 RUN set -x \
   && apk add --update perl perl-dbi perl-dbd-mysql perl-io-socket-ssl perl-term-readkey make ca-certificates wget \
@@ -13,5 +13,5 @@ RUN set -x \
   && make \
   && make test \
   && make install \
-  && apk del make ca-certificates wget \ 
+  && apk del make ca-certificates wget \
   && rm -rf /var/cache/apk/* /tmp/percona-toolkit*
