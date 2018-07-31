@@ -91,7 +91,7 @@ This command will pull the `:latest` image (if you do not have it already) and e
 
 You can also pull the desired image tag from the Docker Hub with:
 
-    docker pull brunoric/percona-toolkit:3.0.1
+    docker pull brunoric/percona-toolkit:3.0.11
 
 This command will pull the image (if you do not have it already) without creating any container like the first method does.
 
@@ -99,7 +99,7 @@ This command will pull the image (if you do not have it already) without creatin
 
 Finally you can build the needed image from scratch. You will need to clone `brunoric/percona-toolkit` from GitHub and use Docker build command:
 
-    docker build -t brunoric/percona-toolkit:3.0.1 .
+    docker build -t brunoric/percona-toolkit:3.0.11 .
 
 With this method you can also make changes on the Dockerfile fitting the image to your runtime.
 

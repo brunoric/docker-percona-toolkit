@@ -1,12 +1,12 @@
-PERCONA_TOOLKIT_VERSION=3.0.1;
+PERCONA_TOOLKIT_VERSION=3.0.11;
 
 function version_test()
 {
-    local VERSION=$(docker run -it brunoric/percona-toolkit:3.0.1 pt-query-digest --version)
+    local VERSION=$(docker run -it brunoric/percona-toolkit:3.0.11 pt-query-digest --version)
     if [[ $VERSION == *"${PERCONA_TOOLKIT_VERSION}"* ]]; then
-        echo 'Version test OK!'; 
+        echo 'Version test OK!';
     else
-        echo 'Version test Failed!'; 
+        echo 'Version test Failed!';
         exit 1;
     fi
 }
